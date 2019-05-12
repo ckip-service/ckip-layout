@@ -22,13 +22,15 @@ export default {
   props: {
     designer: {
       type: Array,
-      default: [
-        {
-          name: 'Mu Yang',
-          href: 'https://muyang.pro',
-        },
-      ],
-    }
+      default() {
+        return [
+          {
+            name: 'Mu Yang',
+            href: 'https://muyang.pro',
+          },
+        ];
+      },
+    },
   },
 };
 </script>
