@@ -2,6 +2,7 @@
   <footer class="bg-light w-100 py-2">
     <b-container>
       <small class="text-muted">
+        <!-- eslint-disable-next-line -->
         Copyright &copy; <b-link href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</b-link>. All rights reserved.
         <template v-if="designer.length !== 0">
           {{ '| Design:' }}
