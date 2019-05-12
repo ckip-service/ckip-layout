@@ -1,7 +1,8 @@
 <template>
   <footer class="bg-light w-100 py-2">
     <b-container>
-      <small class="text-muted">Copyright &copy; <b-link href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</b-link>. All rights reserved.
+      <small class="text-muted">
+        Copyright &copy; <b-link href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</b-link>. All rights reserved.
         <template v-if="designer.length !== 0">
           {{ '| Design:' }}
           <template v-for="(item, key) in designer">
@@ -9,6 +10,7 @@
             <b-link :href="item.href" target="_blank" :key="key">{{ item.name }}</b-link>
           </template>{{ '.' }}
         </template>
+        <slot />
       </small>
     </b-container>
   </footer>
@@ -24,7 +26,7 @@ export default {
         {
           name: 'Mu Yang',
           href: 'https://muyang.pro',
-        }
+        },
       ],
     }
   },

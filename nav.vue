@@ -1,27 +1,41 @@
 <template>
-  <div class="bg-light w-100 py-2 px-3">
-    <b-nav class="container">
-      <b-nav-item
-        href="http://ckip.iis.sinica.edu.tw"
-        target="_blank"
-      >
-        CKIP Lab
-      </b-nav-item>
+  <div class="bg-light w-100">
+    <b-navbar variant="light" toggleable="lg" class="container">
 
-      <b-nav-item
-        href="http://www.iis.sinica.edu.tw/index_zh.html"
-        target="_blank"
-      >
-        中研院資訊所
-      </b-nav-item>
+      <slot name="brand" />
 
-      <b-nav-item
-        href="https://www.sinica.edu.tw/ch"
-        target="_blank"
-      >
-        中央研究院
-      </b-nav-item>
-    </b-nav>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+
+        <slot />
+
+        <b-navbar-nav class="ml-auto">
+
+          <b-nav-item
+            href="http://ckip.iis.sinica.edu.tw"
+            target="_blank"
+          >
+            CKIP Lab
+          </b-nav-item>
+
+          <b-nav-item
+            href="http://www.iis.sinica.edu.tw/index_zh.html"
+            target="_blank"
+          >
+            中研院資訊所
+          </b-nav-item>
+
+          <b-nav-item
+            href="https://www.sinica.edu.tw/ch"
+            target="_blank"
+          >
+            中央研究院
+          </b-nav-item>
+
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
   </div>
 </template>
 

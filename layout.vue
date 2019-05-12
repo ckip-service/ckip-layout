@@ -1,8 +1,8 @@
 <template>
   <div class="min-vh-100 d-flex flex-column" >
-    <Nav />
+    <Nav><slot slot="brand" name="nav-brand" /><slot name="nav" /></Nav>
     <slot />
-    <Footer :designer="designer" />
+    <Footer :designer="designer"><slot name="footer" /></Footer>
   </div>
 </template>
 
