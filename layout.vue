@@ -1,5 +1,5 @@
 <template>
-  <div class="min-vh-100 d-flex flex-column" >
+  <div class="Layout min-vh-100 d-flex flex-column bg-milk-light" >
     <Nav><slot slot="brand" name="nav-brand" /><slot name="nav" /></Nav>
     <slot />
     <Footer :designer="designer"><slot name="footer" /></Footer>
@@ -21,3 +21,7 @@ export default {
   ],
 };
 </script>
+
+<style lang="scss">
+@import "./layout";
+</style>

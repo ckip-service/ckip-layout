@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-light w-100 py-2">
+  <footer class="bg-white border-top w-100 py-2">
     <b-container>
       <small class="text-muted">
         <!-- eslint-disable-next-line -->
