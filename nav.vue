@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light border-bottom w-100">
+  <div class="shadow-sm border-bottom bg-light w-100">
     <b-navbar variant="light" toggleable="lg" class="container">
 
       <slot name="brand" />
