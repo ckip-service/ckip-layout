@@ -1,6 +1,6 @@
 <template>
-  <div class="shadow-sm border-bottom bg-light w-100">
-    <b-navbar variant="light" toggleable="lg" class="container">
+  <div class="shadow-sm border-bottom bg-white w-100">
+    <b-navbar variant="white" toggleable="lg" class="container">
 
       <slot name="brand" />
 
