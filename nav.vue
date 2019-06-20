@@ -23,7 +23,7 @@
             href="http://www.iis.sinica.edu.tw/index_zh.html"
             target="_blank"
           >
-            中研院資訊所
+            資訊所
           </b-nav-item>
 
           <b-nav-item
