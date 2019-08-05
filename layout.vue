@@ -1,9 +1,10 @@
 <template>
-  <div class="Layout min-vh-100 d-flex flex-column bg-milk-light" >
+  <v-app class="Layout milk-light">
     <Nav><slot slot="brand" name="nav-brand" /><slot name="nav" /></Nav>
-    <div class="flex-grow-1"><slot /></div>
+    <v-navigation-drawer app clipped class="grey lighten-5"><slot name="sidebar" /></v-navigation-drawer>
+    <v-content><slot /></v-content>
     <Footer :designer="designer"><slot name="footer" /></Footer>
-  </div>
+  </v-app>
 </template>
 
 <script>

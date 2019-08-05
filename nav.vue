@@ -1,42 +1,40 @@
 <template>
-  <div class="shadow-sm border-bottom bg-white w-100">
-    <b-navbar variant="white" toggleable="lg" class="container">
+  <v-app-bar app clipped-left class="white">
 
-      <slot name="brand" />
+    <v-toolbar-title><slot name="brand" /></v-toolbar-title>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <slot />
 
-      <b-collapse id="nav-collapse" is-nav>
+    <v-spacer></v-spacer>
 
-        <slot />
+    <v-toolbar-items>
 
-        <b-navbar-nav class="ml-auto">
+      <v-btn
+        text
+        href="http://ckip.iis.sinica.edu.tw"
+        target="_blank"
+      >
+        CKIP Lab
+      </v-btn>
 
-          <b-nav-item
-            href="http://ckip.iis.sinica.edu.tw"
-            target="_blank"
-          >
-            CKIP Lab
-          </b-nav-item>
+      <v-btn
+        text
+        href="http://www.iis.sinica.edu.tw/index_zh.html"
+        target="_blank"
+      >
+        資訊所
+      </v-btn>
 
-          <b-nav-item
-            href="http://www.iis.sinica.edu.tw/index_zh.html"
-            target="_blank"
-          >
-            資訊所
-          </b-nav-item>
+      <v-btn
+        text
+        href="https://www.sinica.edu.tw/ch"
+        target="_blank"
+      >
+        中央研究院
+      </v-btn>
 
-          <b-nav-item
-            href="https://www.sinica.edu.tw/ch"
-            target="_blank"
-          >
-            中央研究院
-          </b-nav-item>
-
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
-  </div>
+    </v-toolbar-items>
+  </v-app-bar>
 </template>
 
 <script>

@@ -1,20 +1,20 @@
 <template>
-  <footer class="shadow-sm border-top bg-white w-100 py-2">
-    <b-container>
+  <v-footer app>
+    <v-container class="text-center py-0">
       <small class="text-muted">
         <!-- eslint-disable-next-line -->
-        Copyright &copy; <b-link href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</b-link>. All rights reserved.
+        Copyright &copy; <a href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</a>. All rights reserved.
         <template v-if="designer.length !== 0">
           {{ '| Design:' }}
           <template v-for="(item, key) in designer">
             <template v-if="key !== 0">{{ ', ' }}</template>
-            <b-link :href="item.href" target="_blank" :key="key">{{ item.name }}</b-link>
+            <a :href="item.href" target="_blank" :key="key">{{ item.name }}</a>
           </template>{{ '.' }}
         </template>
         <slot />
       </small>
-    </b-container>
-  </footer>
+    </v-container>
+  </v-footer>
 </template>
 
 <script>
