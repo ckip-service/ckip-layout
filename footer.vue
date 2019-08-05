@@ -1,7 +1,7 @@
 <template>
   <v-footer app>
-    <v-container class="text-center py-0">
-      <small class="text-muted">
+    <v-container class="py-0">
+      <small>
         <!-- eslint-disable-next-line -->
         Copyright &copy; <a href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</a>. All rights reserved.
         <template v-if="designer.length !== 0">

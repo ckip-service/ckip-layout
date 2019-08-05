@@ -1,5 +1,7 @@
 <template>
-  <v-app-bar app clipped-left class="white">
+  <v-app-bar app dense clipped-left>
+
+    <slot name="nav-icon"/>
 
     <v-toolbar-title><slot name="brand" /></v-toolbar-title>
 

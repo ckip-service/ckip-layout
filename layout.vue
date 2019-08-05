@@ -1,9 +1,30 @@
 <template>
-  <v-app class="Layout milk-light">
-    <Nav><slot slot="brand" name="nav-brand" /><slot name="nav" /></Nav>
-    <v-navigation-drawer app clipped class="grey lighten-5"><slot name="sidebar" /></v-navigation-drawer>
-    <v-content><slot /></v-content>
-    <Footer :designer="designer"><slot name="footer" /></Footer>
+  <v-app class="Layout">
+
+    <Nav>
+      <v-app-bar-nav-icon slot="nav-icon" @click.stop="drawer = !drawer"/>
+      <slot slot="brand" name="nav-brand" />
+      <slot name="nav" />
+    </Nav>
+
+    <v-navigation-drawer
+      app
+      clipped
+      v-model="drawer"
+      class="white"
+      :width="sidebarWidth"
+    >
+      <slot name="sidebar" />
+    </v-navigation-drawer>
+
+    <v-content class="milk-light">
+      <slot />
+    </v-content>
+
+    <Footer :designer="designer">
+      <slot name="footer" />
+    </Footer>
+
   </v-app>
 </template>
 
@@ -21,6 +42,12 @@ export default {
   },
   props: [
     'designer',
+    'sidebarWidth',
   ],
+  data() {
+    return {
+      drawer: null,
+    }
+  }
 };
 </script>
