@@ -1,15 +1,20 @@
-$milk: #dcd9cd;
-$milk-light: lighten($milk, 10%);
-$milk-dark: darken($milk, 10%);
+@import "~vuetify/src/styles/settings/_colors";
 
-.milk {
-  background-color: $milk !important;
-}
+$_milk: #bcb7a0; // darken(#dcd9cd, 15);
 
-.milk-light {
-  background-color: $milk-light !important;
-}
+$milk: (
+  'base': $_milk,
+  'lighten-1': lighten($_milk, 5),
+  'lighten-2': lighten($_milk, 10),
+  'lighten-3': lighten($_milk, 15),
+  'lighten-4': lighten($_milk, 20),
+  'lighten-5': lighten($_milk, 25),
+  'darken-1': darken($_milk, 5),
+  'darken-2': darken($_milk, 10),
+  'darken-3': darken($_milk, 15),
+  'darken-4': darken($_milk, 20)
+);
 
-.milk-dark {
-  background-color: $milk-dark !important;
-}
+$colors: map-merge($colors, ('milk': $milk));
+
+@import "~vuetify/src/styles/main.sass";

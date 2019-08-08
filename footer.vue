@@ -1,5 +1,5 @@
 <template>
-  <v-footer app>
+  <v-footer app v-bind="props">
     <v-container class="py-0">
       <small>
         <!-- eslint-disable-next-line -->
@@ -21,6 +21,9 @@
 export default {
   name: 'Footer',
   props: {
+    props: {
+      type: Object,
+    },
     designer: {
       type: Array,
       default() {

@@ -1,7 +1,13 @@
 <template>
-  <v-app-bar app dense clipped-left>
+  <v-app-bar
+    app
+    dense
+    :clipped-left="!right"
+    :clipped-right="right"
+    v-bind="props"
+  >
 
-    <slot name="nav-icon"/>
+    <slot v-if="!right" name="nav-icon" />
 
     <v-toolbar-title><slot name="brand" /></v-toolbar-title>
 
@@ -36,11 +42,22 @@
       </v-btn>
 
     </v-toolbar-items>
+
+    <slot v-if="right" name="nav-icon" />
+
   </v-app-bar>
 </template>
 
 <script>
 export default {
   name: 'Nav',
+  props: {
+    props: {
+      type: Object,
+    },
+    right: {
+      type: Boolean,
+    },
+  },
 };
 </script>

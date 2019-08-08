@@ -1,8 +1,11 @@
 <template>
   <v-app class="Layout">
 
-    <Nav>
-      <v-app-bar-nav-icon slot="nav-icon" @click.stop="drawer = !drawer"/>
+    <Nav
+      :right="right"
+      :props="navProps"
+    >
+      <v-app-bar-nav-icon slot="nav-icon" @click.stop="sidebar = !sidebar"/>
       <slot slot="brand" name="nav-brand" />
       <slot name="nav" />
     </Nav>
@@ -10,18 +13,25 @@
     <v-navigation-drawer
       app
       clipped
-      v-model="drawer"
       class="white"
-      :width="sidebarWidth"
+      v-model="sidebar"
+      :right="right"
+      v-bind="sidebarProps"
     >
       <slot name="sidebar" />
     </v-navigation-drawer>
 
-    <v-content class="milk-light">
+    <v-content
+      class="milk lighten-5"
+      v-bind="contentProps"
+    >
       <slot />
     </v-content>
 
-    <Footer :designer="designer">
+    <Footer
+      :designer="designer"
+      :props="footerProps"
+    >
       <slot name="footer" />
     </Footer>
 
@@ -41,13 +51,17 @@ export default {
     Footer,
   },
   props: [
+    'navProps',
+    'footerProps',
+    'contentProps',
+    'sidebarProps',
+    'right',
     'designer',
-    'sidebarWidth',
   ],
   data() {
     return {
-      drawer: null,
+      sidebar: null,
     }
-  }
+  },
 };
 </script>
