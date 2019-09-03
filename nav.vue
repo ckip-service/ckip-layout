@@ -13,7 +13,7 @@
         <b-navbar-nav class="ml-auto">
 
           <b-nav-item
-            href="http://ckip.iis.sinica.edu.tw"
+            href="//ckip.iis.sinica.edu.tw"
             target="_blank"
           >
             CKIP Lab
