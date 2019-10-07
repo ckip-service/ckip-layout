@@ -27,7 +27,7 @@ export default {
         return [
           {
             name: 'Mu Yang',
-            href: 'https://muyang.pro',
+            href: 'http://muyang.pro',
           },
         ];
       },
