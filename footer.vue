@@ -1,9 +1,9 @@
 <template>
-  <footer class="shadow-sm border-top bg-white w-100 py-2">
-    <b-container>
-      <small class="text-muted">
+  <footer class="Footer shadow-sm border-top bg-white w-100 py-2">
+    <b-container class="d-flex text-muted">
+      <div>
         <!-- eslint-disable-next-line -->
-        Copyright &copy; <b-link href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</b-link>. All rights reserved.
+        &copy; <b-link href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</b-link>
         <template v-if="designer.length !== 0">
           {{ '| Web Design:' }}
           <template v-for="(item, key) in designer">
@@ -12,7 +12,26 @@
           </template>{{ '.' }}
         </template>
         <slot />
-      </small>
+      </div>
+
+      <div class="ml-auto">
+        <a
+          class="mx-1"
+          href="https://github.com/ckiplab"
+          target="_blank"
+          title="GitHub"
+        >
+          <font-awesome-icon :icon="['fab', 'github']" />
+        </a>
+        <a
+          class="mx-1"
+          href="https://github.com/ckiplab/issue/issues"
+          target="_blank"
+          title="Bug Report"
+        >
+          <font-awesome-icon icon="bug" />
+        </a>
+      </div>
     </b-container>
   </footer>
 </template>
@@ -35,3 +54,9 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+.Footer {
+  font-size: smaller;
+}
+</style>

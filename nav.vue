@@ -10,10 +10,12 @@
 
         <slot />
 
+        <hr />
+
         <b-navbar-nav class="ml-auto">
 
           <b-nav-item
-            href="//ckip.iis.sinica.edu.tw"
+            href="https://ckip.iis.sinica.edu.tw"
             target="_blank"
           >
             CKIP Lab
