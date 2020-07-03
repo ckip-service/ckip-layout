@@ -1,8 +1,19 @@
 <template>
   <div class="Layout min-vh-100 d-flex flex-column bg-milk-light" >
-    <Nav><slot slot="brand" name="nav-brand" /><slot name="nav" /></Nav>
-    <div class="flex-grow-1"><slot /></div>
-    <Footer :designer="designer"><slot name="footer" /></Footer>
+    <Nav>
+      <slot slot="brand" name="nav-brand" />
+      <slot name="nav" />
+    </Nav>
+
+    <div class="flex-grow-1 position-relative">
+      <div class="position-absolute h-100 w-100">
+        <slot />
+      </div>
+    </div>
+
+    <Footer :designer="designer">
+      <slot name="footer" />
+    </Footer>
   </div>
 </template>
 
