@@ -1,6 +1,6 @@
 <template>
   <footer class="Footer shadow-sm border-top bg-white w-100 py-2">
-    <b-container class="d-flex text-muted">
+    <b-container :fluid="fluid" class="d-flex text-muted">
       <div>
         <!-- eslint-disable-next-line -->
         &copy; <b-link href="//ckip.iis.sinica.edu.tw" target="_blank">CKIP Lab</b-link>
@@ -40,6 +40,10 @@
 export default {
   name: 'Footer',
   props: {
+    fluid: {
+      type: Boolean,
+      default: false,
+    },
     designer: {
       type: Array,
       default() {

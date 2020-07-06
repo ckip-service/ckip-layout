@@ -1,6 +1,6 @@
 <template>
   <div class="Layout min-vh-100 d-flex flex-column bg-milk-light" >
-    <Nav>
+    <Nav :fluid="fluid">
       <slot slot="brand" name="nav-brand" />
       <slot name="nav" />
     </Nav>
@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <Footer :designer="designer">
+    <Footer :fluid="fluid" :designer="designer">
       <slot name="footer" />
     </Footer>
   </div>
@@ -30,6 +30,7 @@ export default {
     Footer,
   },
   props: [
+    'fluid',
     'designer',
   ],
 };

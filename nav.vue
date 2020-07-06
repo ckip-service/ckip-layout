@@ -1,6 +1,6 @@
 <template>
   <div class="shadow-sm border-bottom bg-white w-100">
-    <b-navbar variant="white" toggleable="lg" class="container">
+    <b-navbar variant="white" toggleable="lg" :class="navClass">
 
       <slot name="brand" />
 
@@ -44,5 +44,16 @@
 <script>
 export default {
   name: 'Nav',
+  props: {
+    fluid: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    navClass() {
+      return this.fluid ? 'container-fluid' : 'container';
+    },
+  },
 };
 </script>
