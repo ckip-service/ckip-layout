@@ -3,6 +3,7 @@
     <Nav :fluid="fluid">
       <slot slot="brand" name="nav-brand" />
       <slot name="nav" />
+      <slot slot="right" name="nav-right" />
     </Nav>
 
     <div class="flex-grow-1 position-relative">

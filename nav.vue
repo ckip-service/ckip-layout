@@ -14,6 +14,8 @@
 
         <b-navbar-nav class="ml-auto">
 
+          <slot name="right" />
+
           <b-nav-item
             href="https://ckip.iis.sinica.edu.tw"
             target="_blank"
