@@ -1,6 +1,6 @@
 <template>
   <div class="shadow-sm border-bottom bg-white w-100">
-    <b-navbar variant="white" toggleable="lg" :class="navClass">
+    <b-navbar variant="white" :toggleable="toggleable" :class="navClass">
 
       <slot name="brand" />
 
@@ -50,6 +50,10 @@ export default {
     fluid: {
       type: Boolean,
       default: false,
+    },
+    toggleable: {
+      type: [Boolean, String],
+      default: 'lg',
     },
   },
   computed: {
