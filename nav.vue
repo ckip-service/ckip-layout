@@ -24,7 +24,7 @@
           </b-nav-item>
 
           <b-nav-item
-            href="http://www.iis.sinica.edu.tw/index_zh.html"
+            href="https://www.iis.sinica.edu.tw/zh/index.html"
             target="_blank"
           >
             資訊所
