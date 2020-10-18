@@ -6,7 +6,13 @@
       <slot slot="right" name="nav-right" />
     </Nav>
 
-    <div class="flex-grow-1">
+    <div v-if="fixHeight" class="flex-grow-1 position-relative">
+      <div class="position-absolute h-100 w-100">
+        <slot />
+      </div>
+    </div>
+
+    <div v-else class="flex-grow-1">
       <slot />
     </div>
 
@@ -28,10 +34,14 @@ export default {
     Nav,
     Footer,
   },
-  props: [
-    'fluid',
-    'designer',
-    'toggleable',
-  ],
+  props: {
+    fluid: {},
+    designer: {},
+    toggleable: {},
+    fixHeight: {
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>
