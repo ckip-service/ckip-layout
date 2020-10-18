@@ -6,10 +6,8 @@
       <slot slot="right" name="nav-right" />
     </Nav>
 
-    <div class="flex-grow-1 position-relative">
-      <div class="position-absolute h-100 w-100">
-        <slot />
-      </div>
+    <div class="flex-grow-1">
+      <slot />
     </div>
 
     <Footer :fluid="fluid" :designer="designer">
