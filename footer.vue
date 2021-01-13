@@ -8,8 +8,10 @@
           {{ '| Web Design:' }}
           <template v-for="(item, key) in designer">
             <template v-if="key !== 0">{{ ', ' }}</template>
-            <b-link :href="item.href" target="_blank" :key="key">{{ item.name }}</b-link>
-          </template>{{ '.' }}
+            <b-link :href="item.href" target="_blank" :key="key">{{
+              item.name
+            }}</b-link> </template
+          >{{ '.' }}
         </template>
         <slot />
       </div>

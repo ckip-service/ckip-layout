@@ -1,5 +1,5 @@
 <template>
-  <div class="Layout min-vh-100 d-flex flex-column bg-milk-light" >
+  <div class="Layout min-vh-100 d-flex flex-column bg-milk-light">
     <Nav :fluid="fluid" :toggleable="toggleable">
       <slot slot="brand" name="nav-brand" />
       <slot name="nav" />
