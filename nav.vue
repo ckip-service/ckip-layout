@@ -6,7 +6,7 @@
       <b-navbar-toggle target="nav-collapse" />
 
       <b-collapse id="nav-collapse" is-nav>
-        <slot />
+        <slot name="body" />
 
         <hr />
 

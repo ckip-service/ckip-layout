@@ -1,9 +1,15 @@
 <template>
   <div class="Layout min-vh-100 d-flex flex-column bg-milk-light">
     <Nav :fluid="fluid" :toggleable="toggleable">
-      <slot slot="brand" name="nav-brand" />
-      <slot name="nav" />
-      <slot slot="right" name="nav-right" />
+      <template #brand>
+        <slot name="nav-brand" />
+      </template>
+      <template #body>
+        <slot name="nav-body" />
+      </template>
+      <template #right>
+        <slot name="nav-right" />
+      </template>
     </Nav>
 
     <div v-if="fixHeight" class="flex-grow-1 position-relative">
